@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.befoys'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.befoys"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    /* COMMON */
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    /*
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    */
+
+    /* HTTP REQUEST */
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    /* DAGGER */
+    implementation 'com.google.dagger:dagger:2.11'
+    implementation 'com.google.dagger:dagger-android:2.15'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    annotationProcessor("javax.annotation:javax.annotation-api:1.3.2")
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    implementation 'com.j256.ormlite:ormlite-core:4.48'
+
+    //implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    //implementation 'com.github.smarteist:autoimageslider:1.3.9-appcompat'
+
+    implementation('com.squareup.picasso:picasso:2.71828') {
+        exclude group: 'com.android.support'
+        exclude module: ['exifinterface', 'support-annotations']
+    }
+
+    /*
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    */
+
+    /* IMAGE SLIDER */
+    //implementation 'com.github.smarteist:autoimageslider:1.3.9-appcompat'
+
+    //implementation "androidx.exifinterface:exifinterface:1.1.0"
+
+    /* FIREBASE */
+    /*
+    implementation 'com.google.firebase:firebase-iid:20.2.1'
+    implementation 'com.google.firebase:firebase-core:20.2.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.1'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+    */
+
+    /* PICASSO */
+    /*
+    implementation('com.squareup.picasso:picasso:2.71828') {
+        exclude group: 'com.android.support'
+        exclude module: ['exifinterface', 'support-annotations']
+    }
+    */
+}

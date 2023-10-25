@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    android:textAlignment="textStart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/loadingPart"
+        style="@style/ProgressbarContainer">
+
+        <ProgressBar
+            style="@style/WrapContent" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:visibility="gone"
+        style="@style/MatchParent">
+
+        <ScrollView style="@style/MatchParent">
+
+            <LinearLayout
+                style="@style/PageContent">
+
+                <include layout="@layout/partial_slideshow" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    style="@style/StandardContent"
+                    android:id="@+id/recyclerLastOrders" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

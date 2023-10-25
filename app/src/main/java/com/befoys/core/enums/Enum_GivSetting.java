@@ -1,0 +1,14 @@
+package com.befoys.core.enums;
+
+public enum  Enum_GivSetting {
+    GIV_SERVICE_TOKEN,
+    GIV_SERVICE_URL,
+    GIV_COMPANY_ID,
+    GIV_COMPANY_NAME,
+    GIV_CLIENT_ID,
+    GIV_CLIENT_NAME,
+    GIV_CLIENT_TELL,
+    GIV_CLIENT_MANAGER_NAME,
+    GIV_ACTIVE_STOCK_ID,
+    GIV_ACTIVE_PROJECT_ID
+}

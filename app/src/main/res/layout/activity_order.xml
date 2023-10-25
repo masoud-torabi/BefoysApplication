@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.OrderActivity"
+    style="@style/Drawer">
+
+    <RelativeLayout
+        style="@style/DrawerContainer">
+        <include layout="@layout/partial_toolbar_back" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin">
+
+            <com.befoys.core.persian.PersianButton
+                android:id="@+id/btnChangeStatus"
+                android:text="تغییر وضعیت"
+                android:layout_marginTop="@dimen/default_margin"
+                style="@style/Button" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleOrderItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_menu"
+        style="@style/NavigationDrawer"
+        app:itemIconTint="@color/primaryColor"
+        app:itemTextColor="@color/primaryColor"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/partial_drawer_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".drivers.activities.TravelActivity"
+    style="@style/Drawer">
+
+    <RelativeLayout
+        style="@style/DrawerContainer">
+        <include layout="@layout/partial_toolbar_back" />
+
+        <LinearLayout
+            android:layout_below="@+id/toolbar"
+            style="@style/PageContent"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin">
+
+            <com.befoys.core.persian.PersianTextView
+                android:id="@+id/lblTravelName"
+                style="@style/StandardLabel"
+                android:layout_marginRight="@dimen/default_margin"
+                android:text="@string/label_travel_name" />
+
+            <com.befoys.core.persian.PersianTextView
+                android:id="@+id/lblTravelStatus"
+                style="@style/StandardLabel"
+                android:layout_marginRight="@dimen/default_margin"
+                android:text="@string/label_travel_status" />
+
+            <com.befoys.core.persian.PersianTextView
+                android:id="@+id/lblTravelDatetime"
+                style="@style/StandardLabel"
+                android:layout_marginRight="@dimen/default_margin"
+                android:text="@string/label_travel_datetime" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleTravelItems"
+                style="@style/StandardContent"
+                android:layout_marginTop="@dimen/default_margin" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_menu"
+        style="@style/NavigationDrawer"
+        app:itemIconTint="@color/primaryColor"
+        app:itemTextColor="@color/primaryColor"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/partial_drawer_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

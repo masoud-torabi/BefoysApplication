@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/panelLoginComplete"
+    android:visibility="gone"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/default_margin"
+    app:cardElevation="@dimen/default_elevation"
+    style="@style/Form">
+
+    <LinearLayout
+        style="@style/FormGroup">
+        <com.befoys.core.persian.PersianTextView
+            style="@style/FormLabel"
+            android:text="@string/label_code_value" />
+
+        <com.befoys.core.persian.PersianEditText
+            android:id="@+id/txtLoginCodeValue"
+            style="@style/FormControl"
+            android:inputType="number"
+            android:drawableLeft="@drawable/icon_smsvalue"/>
+
+        <com.befoys.core.persian.PersianButton
+            android:id="@+id/btnLoginComplete"
+            style="@style/Button"
+            android:text="@string/login_complete" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

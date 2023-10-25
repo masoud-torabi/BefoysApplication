@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".drivers.fragments.ProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/loadingPart"
+        style="@style/ProgressbarContainer">
+
+        <ProgressBar
+            style="@style/WrapContent" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:visibility="gone"
+        style="@style/MatchParent">
+        <ScrollView style="@style/MatchParent">
+            <LinearLayout
+                style="@style/PageContent">
+
+                <LinearLayout
+                    android:layout_below="@+id/toolbar"
+                    style="@style/PageContent"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:layout_marginLeft="@dimen/default_margin">
+
+                    <com.befoys.core.persian.PersianTextView
+                        android:id="@+id/lblDriverName"
+                        style="@style/StandardLabel"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text="@string/label_driver_name" />
+
+                    <com.befoys.core.persian.PersianTextView
+                        android:id="@+id/lblDriverVehicleName"
+                        style="@style/StandardLabel"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text="@string/label_vehicle_name" />
+
+                    <com.befoys.core.persian.PersianTextView
+                        android:id="@+id/lblDriverVehiclePlaque"
+                        style="@style/StandardLabel"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text="@string/label_vehicle_plaque" />
+
+                    <com.befoys.core.persian.PersianTextView
+                        android:id="@+id/lblDriverMobileNumber"
+                        style="@style/StandardLabel"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text="@string/label_mobile_number" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

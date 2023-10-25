@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:padding="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    android:clipToPadding="false"
+    style="@style/Toolbar">
+
+    <LinearLayout
+        style="@style/ToolbarContainer">
+
+        <LinearLayout
+            android:gravity="start|center_vertical"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgToggleDrawer"
+                android:src="@drawable/menu_icon"
+                style="@style/ToolbarIcon" />
+
+            <com.befoys.core.persian.PersianTextView
+                style="@style/ToolbarText"
+                android:text="@string/app_name"
+                android:id="@+id/lblToolbarTitle" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="end|center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgToolbarBack"
+                android:src="@drawable/icon_arrow_left"
+                style="@style/ToolbarIcon" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>
