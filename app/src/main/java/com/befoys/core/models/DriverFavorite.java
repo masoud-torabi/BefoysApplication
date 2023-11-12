@@ -1,67 +1,67 @@
 package com.befoys.core.models;
 
 public class DriverFavorite {
-    private Integer BuyerId;
-    private Integer ShopResellerId;
-    private String Name;
-    private Double Latitude;
-    private Double Longitude;
-    private String Phone;
-    private String AddressValue;
+    private Integer buyerId;
+    private Integer shopResellerId;
+    private String name;
+    private Double latitude;
+    private Double longitude;
+    private String phone;
+    private String addressValue;
 
     public Integer getBuyerId() {
-        return BuyerId;
+        return buyerId;
     }
 
     public void setBuyerId(Integer buyerId) {
-        BuyerId = buyerId;
+        this.buyerId = buyerId;
     }
 
     public Integer getShopResellerId() {
-        return ShopResellerId;
+        return shopResellerId;
     }
 
     public void setShopResellerId(Integer shopResellerId) {
-        ShopResellerId = shopResellerId;
+        this.shopResellerId = shopResellerId;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public Double getLatitude() {
-        return Latitude;
+        return latitude;
     }
 
     public void setLatitude(Double latitude) {
-        Latitude = latitude;
+        this.latitude = latitude;
     }
 
     public Double getLongitude() {
-        return Longitude;
+        return longitude;
     }
 
     public void setLongitude(Double longitude) {
-        Longitude = longitude;
+        this.longitude = longitude;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getAddressValue() {
-        return AddressValue;
+        return addressValue;
     }
 
     public void setAddressValue(String addressValue) {
-        AddressValue = addressValue;
+        this.addressValue = addressValue;
     }
 }

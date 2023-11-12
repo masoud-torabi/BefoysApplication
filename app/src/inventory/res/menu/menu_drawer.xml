@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/icon_home"
+            android:title="@string/menu_home_page" />
+        <item
+            android:id="@+id/menu_barcode"
+            android:icon="@drawable/icon_barcode"
+            android:title="@string/menu_warehouse_barcode" />
+        <item
+            android:id="@+id/menu_handling"
+            android:icon="@drawable/icon_handling"
+            android:title="@string/menu_warehouse_handling" />
+        <item
+            android:id="@+id/menu_doc"
+            android:icon="@drawable/icon_doc"
+            android:title="@string/menu_warehouse_doc" />
+        <item
+            android:id="@+id/menu_quantity"
+            android:icon="@drawable/icon_quantity"
+            android:title="@string/menu_warehouse_quantity" />
+        <item
+            android:id="@+id/menu_exit"
+            android:icon="@drawable/icon_exit"
+            android:title="@string/menu_exit" />
+    </group>
+</menu>

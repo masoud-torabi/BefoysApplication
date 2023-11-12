@@ -3,31 +3,32 @@ package com.befoys.core.models;
 import java.util.ArrayList;
 
 public class DriverOrder {
-    private Integer Id;
-    private Code Status;
-    private ArrayList<DriverOrderItem> Items;
+    private Integer id;
+    private Code status;
+    private ArrayList<DriverOrderItem> items;
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public Code getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(Code status) {
-        Status = status;
+        this.status = status;
     }
 
     public ArrayList<DriverOrderItem> getItems() {
-        return Items;
+        return items;
     }
 
     public void setItems(ArrayList<DriverOrderItem> items) {
-        Items = items;
+        this.items = items;
     }
+
 }

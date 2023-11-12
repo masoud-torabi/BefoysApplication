@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">انبار بیفویز</string>
+    <string name="alert_ok">باشه</string>
+
+    <string name="menu_home_page">صفحه نخست</string>
+    <string name="menu_warehouse_doc">حواله های انبار</string>
+    <string name="menu_warehouse_quantity">موجودی انبار</string>
+    <string name="menu_warehouse_barcode">بارکدهای انبار</string>
+    <string name="menu_warehouse_handling">انبارگردانی</string>
+    <string name="menu_exit">خروج</string>
+
+    <string name="label_mobile">شماره موبایل</string>
+    <string name="login_and_send_sms">ورود به سیستم</string>
+    <string name="label_password">رمز عبور</string>
+    <string name="label_count">تعداد: </string>
+</resources>

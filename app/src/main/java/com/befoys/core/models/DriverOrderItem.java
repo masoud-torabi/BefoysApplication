@@ -1,76 +1,77 @@
 package com.befoys.core.models;
 
 public class DriverOrderItem {
-    private Integer Id;
-    private Product Product;
-    private Color Color;
-    private Size Size;
-    private Float Count;
-    private Boolean IsCanceled;
-    private Float CancelCount;
-    private String CancelDescription;
-
-    public Boolean getCanceled() {
-        return IsCanceled;
-    }
-
-    public void setCanceled(Boolean canceled) {
-        IsCanceled = canceled;
-    }
-
-    public Float getCancelCount() {
-        return CancelCount;
-    }
-
-    public void setCancelCount(Float cancelCount) {
-        CancelCount = cancelCount;
-    }
-
-    public String getCancelDescription() {
-        return CancelDescription;
-    }
-
-    public void setCancelDescription(String cancelDescription) {
-        CancelDescription = cancelDescription;
-    }
+    private Integer id;
+    private Product product;
+    private Color color;
+    private Size size;
+    private Float count;
+    private Boolean isCanceled;
+    private Float cancelCount;
+    private String cancelDescription;
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public Product getProduct() {
-        return Product;
+        return product;
     }
 
     public void setProduct(Product product) {
-        Product = product;
+        this.product = product;
     }
 
     public Color getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(Color color) {
-        Color = color;
+        this.color = color;
     }
 
     public Size getSize() {
-        return Size;
+        return size;
     }
 
     public void setSize(Size size) {
-        Size = size;
+        this.size = size;
     }
 
     public Float getCount() {
-        return Count;
+        return count;
     }
 
     public void setCount(Float count) {
-        Count = count;
+        this.count = count;
     }
+
+    public Boolean getCanceled() {
+        return isCanceled;
+    }
+
+    public void setCanceled(Boolean canceled) {
+        isCanceled = canceled;
+    }
+
+    public Float getCancelCount() {
+        return cancelCount;
+    }
+
+    public void setCancelCount(Float cancelCount) {
+        this.cancelCount = cancelCount;
+    }
+
+    public String getCancelDescription() {
+        return cancelDescription;
+    }
+
+    public void setCancelDescription(String cancelDescription) {
+        this.cancelDescription = cancelDescription;
+    }
+
 }

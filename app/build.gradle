@@ -28,6 +28,20 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        drivers {
+            applicationId "com.befoys.drivers"
+            versionCode 1
+            versionName '1.1'
+        }
+        inventory {
+            applicationId "com.befoys.inventory"
+            versionCode 1
+            versionName '1.1'
+        }
+    }
 }
 
 dependencies {

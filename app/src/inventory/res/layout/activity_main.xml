@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".inventory.activities.MainActivity"
+    style="@style/Drawer">
+
+    <RelativeLayout
+        style="@style/DrawerContainer">
+        <include layout="@layout/partial_toolbar" />
+        <LinearLayout
+            android:layout_below="@+id/toolbar"
+            style="@style/PageContent"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin">
+
+            <com.befoys.core.persian.PersianTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="MASOUD TORABI" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_menu"
+        style="@style/NavigationDrawer"
+        app:itemIconTint="@color/primaryColor"
+        app:itemTextColor="@color/primaryColor"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/partial_drawer_header" />
+</androidx.drawerlayout.widget.DrawerLayout>

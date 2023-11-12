@@ -3,67 +3,70 @@ package com.befoys.core.models;
 import java.util.ArrayList;
 
 public class Travel {
-    private Integer Id;
-    private String Name;
-    private Code Status;
-    private String StartDatetime;
-    private Double ProductCount;
-    private Boolean Active;
-    private ArrayList<TravelStep> TravelSteps;
+
+    private Integer id;
+    private String name;
+    private Code status;
+    private String startDatetime;
+    private Double productCount;
+    private Boolean active;
+    private ArrayList<TravelStep> travelSteps;
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public Code getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(Code status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getStartDatetime() {
-        return StartDatetime;
+        return startDatetime;
     }
 
     public void setStartDatetime(String startDatetime) {
-        StartDatetime = startDatetime;
+        this.startDatetime = startDatetime;
     }
 
     public Double getProductCount() {
-        return ProductCount;
+        return productCount;
     }
 
     public void setProductCount(Double productCount) {
-        ProductCount = productCount;
+        this.productCount = productCount;
     }
 
     public Boolean getActive() {
-        return Active;
+        return active;
     }
 
     public void setActive(Boolean active) {
-        Active = active;
+        this.active = active;
     }
 
     public ArrayList<TravelStep> getTravelSteps() {
-        return TravelSteps;
+        return travelSteps;
     }
 
     public void setTravelSteps(ArrayList<TravelStep> travelSteps) {
-        TravelSteps = travelSteps;
+        this.travelSteps = travelSteps;
     }
+
+
 }

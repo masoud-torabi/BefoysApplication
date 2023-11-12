@@ -1,10 +1,14 @@
 package com.befoys.core.webservice.retrofit;
 
+import com.befoys.core.dagger.EntityComponent;
 import com.befoys.core.enums.Enum_Api;
 import com.befoys.core.enums.Enum_ApiResultStatus;
 import com.befoys.core.enums.Enum_RequestType;
+import com.befoys.core.helpers.MyApplication;
 import com.befoys.core.models.Driver;
+import com.befoys.core.models.SiteUser;
 import com.befoys.core.modules.DriverModule;
+import com.befoys.core.modules.SiteUserModule;
 import com.befoys.core.webservice.base.ApiBase;
 import com.befoys.core.webservice.base.ApiCallerBase;
 import com.befoys.core.webservice.base.ApiHeader;
@@ -44,6 +48,13 @@ public class RetrofitApiCaller extends ApiCallerBase implements IApiCaller {
         {
             listHeaders.put("UNIQUE_ID", currentDriver.getUniqueId());
             listHeaders.put("UNIQUE_KEY", currentDriver.getUniqueValue());
+        }
+
+        SiteUser currentUser = SiteUserModule.getCurrent();
+        if (currentUser != null)
+        {
+            listHeaders.put("UNIQUE_ID", currentUser.getUniqueId());
+            listHeaders.put("UNIQUE_KEY", currentUser.getPassword());
         }
 
         HashMap<String, String> listQueryParameters = new HashMap();

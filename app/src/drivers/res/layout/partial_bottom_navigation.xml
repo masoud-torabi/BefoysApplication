@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNavigationContainer"
+    style="@style/BottomNavigationContainer">
+
+    <androidx.cardview.widget.CardView
+        style="@style/FitWidth">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            style="@style/BottomNavigation"
+            android:outlineSpotShadowColor="@color/primaryColor"
+            android:outlineAmbientShadowColor="@color/primaryColor"
+            app:menu="@menu/menu_bottom"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:itemRippleColor="@color/primaryColor"
+            app:itemBackground="@color/primaryColor" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

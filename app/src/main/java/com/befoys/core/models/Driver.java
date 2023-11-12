@@ -1,17 +1,31 @@
 package com.befoys.core.models;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "driver")
 public class Driver {
+    @DatabaseField(columnName = "id", id = true)
     private int id;
+    @DatabaseField(columnName = "name")
     private String name;
-    private Picture picture;
+    @DatabaseField(columnName = "mobile")
     private String mobile;
+    @DatabaseField(columnName = "licenceNumber")
     private String licenceNumber;
+    @DatabaseField(columnName = "vehicleName")
     private String vehicleName;
+    @DatabaseField(columnName = "vehiclePlaque")
     private String vehiclePlaque;
+    @DatabaseField(columnName = "smsValue")
     private String smsValue;
+    @DatabaseField(columnName = "vehicleVIN")
     private String vehicleVIN;
+    @DatabaseField(columnName = "uniqueId")
     private String uniqueId;
+    @DatabaseField(columnName = "uniqueValue")
     private String uniqueValue;
+    @DatabaseField(columnName = "active")
     private boolean active;
 
     public String getName() {
@@ -101,13 +115,4 @@ public class Driver {
     public void setId(int id) {
         id = id;
     }
-
-    public com.befoys.core.models.Picture getPicture() {
-        return picture;
-    }
-
-    public void setPicture(com.befoys.core.models.Picture picture) {
-        picture = picture;
-    }
-
 }

@@ -1,34 +1,43 @@
 package com.befoys.core.models;
 
 public class Code {
-    private int Id;
-    private String Name;
-    private String Label;
-    private CodeGroup CodeGroup;
+    private int id;
+    private String name;
+    private String label;
+    private CodeGroup codeGroup;
 
-    public Code() {}
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getLabel() {
-        return Label;
+        return label;
     }
 
     public void setLabel(String label) {
-        Label = label;
+        this.label = label;
     }
 
     public CodeGroup getCodeGroup() {
-        return CodeGroup;
+        return codeGroup;
     }
 
     public void setCodeGroup(CodeGroup codeGroup) {
-        CodeGroup = codeGroup;
+        this.codeGroup = codeGroup;
     }
+
+    public Code() {}
+
 }

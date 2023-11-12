@@ -1,121 +1,121 @@
 package com.befoys.core.models;
 
 public class TravelStep {
-    private Integer Id;
-    private Integer ResellerOrderId;
-    private Integer BuyerId;
-    private Integer ShopResellerId;
-    private Code Type;
-    private Code Status;
-    private String Name;
-    private Double Latitude;
-    private Double Longitude;
-    private String Phone;
-    private String AddressValue;
-    private Double ProductCount;
-    private Boolean IsFavorite;
-
-    public Boolean getFavorite() {
-        return IsFavorite;
-    }
-
-    public void setFavorite(Boolean favorite) {
-        IsFavorite = favorite;
-    }
+    private Integer id;
+    private Integer resellerOrderId;
+    private Integer buyerId;
+    private Integer shopResellerId;
+    private Code type;
+    private Code status;
+    private String name;
+    private Double latitude;
+    private Double longitude;
+    private String phone;
+    private String addressValue;
+    private Double productCount;
+    private Boolean isFavorite;
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public Integer getResellerOrderId() {
-        return ResellerOrderId;
+        return resellerOrderId;
     }
 
     public void setResellerOrderId(Integer resellerOrderId) {
-        ResellerOrderId = resellerOrderId;
+        this.resellerOrderId = resellerOrderId;
     }
 
     public Integer getBuyerId() {
-        return BuyerId;
+        return buyerId;
     }
 
     public void setBuyerId(Integer buyerId) {
-        BuyerId = buyerId;
+        this.buyerId = buyerId;
     }
 
     public Integer getShopResellerId() {
-        return ShopResellerId;
+        return shopResellerId;
     }
 
     public void setShopResellerId(Integer shopResellerId) {
-        ShopResellerId = shopResellerId;
+        this.shopResellerId = shopResellerId;
     }
 
     public Code getType() {
-        return Type;
+        return type;
     }
 
     public void setType(Code type) {
-        Type = type;
+        this.type = type;
     }
 
     public Code getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(Code status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public Double getLatitude() {
-        return Latitude;
+        return latitude;
     }
 
     public void setLatitude(Double latitude) {
-        Latitude = latitude;
+        this.latitude = latitude;
     }
 
     public Double getLongitude() {
-        return Longitude;
+        return longitude;
     }
 
     public void setLongitude(Double longitude) {
-        Longitude = longitude;
+        this.longitude = longitude;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getAddressValue() {
-        return AddressValue;
+        return addressValue;
     }
 
     public void setAddressValue(String addressValue) {
-        AddressValue = addressValue;
+        this.addressValue = addressValue;
     }
 
     public Double getProductCount() {
-        return ProductCount;
+        return productCount;
     }
 
     public void setProductCount(Double productCount) {
-        ProductCount = productCount;
+        this.productCount = productCount;
+    }
+
+    public Boolean getFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(Boolean favorite) {
+        isFavorite = favorite;
     }
 }

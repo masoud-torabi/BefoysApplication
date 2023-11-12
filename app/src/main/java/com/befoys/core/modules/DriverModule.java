@@ -1,9 +1,18 @@
 package com.befoys.core.modules;
 
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.befoys.core.database.DatabaseContext;
 import com.befoys.core.enums.Enum_Api;
 import com.befoys.core.enums.Enum_RequestType;
+import com.befoys.core.helpers.MyApplication;
 import com.befoys.core.models.Driver;
 import com.befoys.core.webservice.base.ApiResultListener;
+
+import java.sql.SQLException;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -21,57 +30,62 @@ public class DriverModule extends BaseModule<Driver> {
 
     public static Driver getCurrent()
     {
-        /*
-        Realm realm = getRealmInstance();
-        Driver Driver = realm.where(Driver.class).findFirst();
-        return Driver;
-         */
-        return null;
+        Context context = MyApplication.getContext();
+        DatabaseContext dbContext = new DatabaseContext(context);
+        try {
+            List<Driver> list = dbContext.getAll(Driver.class);
+            if (list.size() > 0) {
+                return list.get(0);
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+            return null;
+        }
     }
 
     @Inject
-    public Driver getCurrentDriver()
-    {
-        /*
-        Realm realm = getRealmInstance();
-        Driver Driver = realm.where(Driver.class).findFirst();
-        return Driver;
-
-         */
-        return null;
+    public Driver getCurrentDriver() {
+        Context context = MyApplication.getContext();
+        DatabaseContext dbContext = new DatabaseContext(context);
+        try {
+            List<Driver> list = dbContext.getAll(Driver.class);
+            if (list.size() > 0) {
+                return list.get(0);
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+            return null;
+        }
     }
 
     @Inject
     public void setCurrentDriver(Driver entity)
     {
-        /*
-        Realm realm = getRealmInstance();
-        realm.beginTransaction();
-        realm.insertOrUpdate(entity);
-        realm.commitTransaction();
-        */
+        Context context = MyApplication.getContext();
+        DatabaseContext dbContext = new DatabaseContext(context);
+        try {
+            dbContext.createOrUpdate(entity);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+            Log.e("DATABASE", e.getMessage());
+        }
     }
     @Inject
     public void removeCurrentDriver()
     {
-        /*
-        Realm realm = getRealmInstance();
-        final RealmResults<Driver> users = realm
-                .where(Driver.class)
-                .findAll();
-
-        Driver userdatabase = users.where().findFirst();
-
-        if(userdatabase!=null) {
-
-            if (!realm.isInTransaction()) {
-                realm.beginTransaction();
-            }
-
-            userdatabase.deleteFromRealm();
-            realm.commitTransaction();
+        Context context = MyApplication.getContext();
+        DatabaseContext dbContext = new DatabaseContext(context);
+        try {
+            List<Driver> list = dbContext.getAll(Driver.class);
+            dbContext.deleteAll(Driver.class, list);
+        } catch (SQLException e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
         }
-         */
     }
 
     @Inject

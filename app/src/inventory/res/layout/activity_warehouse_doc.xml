@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".inventory.activities.MainActivity"
+    style="@style/Drawer">
+
+    <RelativeLayout
+        style="@style/DrawerContainer">
+        <include layout="@layout/partial_toolbar_back" />
+        <LinearLayout
+            android:layout_below="@+id/toolbar"
+            style="@style/PageContent"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/label_back_gray"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="3dp"
+                    android:layout_height="50dp">
+
+                    <ImageButton
+                        android:id="@+id/btnAdd"
+                        android:background="@color/label_back_gray"
+                        android:src="@drawable/icon_add"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/imgWarehouseSearch"
+                        android:background="@color/label_back_gray"
+                        android:src="@drawable/icon_search"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent" />
+
+                    <com.befoys.core.persian.PersianEditText
+                        android:id="@+id/txtWarehouseDocId"
+                        android:background="@color/white"
+                        android:layout_weight="8"
+                        android:layout_width="0dp"
+                        android:textSize="12dp"
+                        android:paddingStart="@dimen/default_padding"
+                        android:inputType="number"
+                        android:hint="@string/menu_warehouse_doc"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_menu"
+        style="@style/NavigationDrawer"
+        app:itemIconTint="@color/primaryColor"
+        app:itemTextColor="@color/primaryColor"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/partial_drawer_header" />
+</androidx.drawerlayout.widget.DrawerLayout>
