@@ -22,6 +22,12 @@
         android:theme="@style/Theme.Befoys"
         tools:targetApi="31">
         <activity
+            android:name=".inventory.activities.WarehouseHandlingCountingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".inventory.activities.WarehouseHandlingActivity"
+            android:exported="false" />
+        <activity
             android:name=".inventory.activities.WarehouseDocAddActivity"
             android:exported="false" />
         <activity

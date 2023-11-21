@@ -10,6 +10,8 @@ import com.befoys.core.modules.SliderModule;
 import com.befoys.core.modules.TravelModule;
 import com.befoys.core.modules.TravelStepModule;
 import com.befoys.core.modules.WarehouseDocModule;
+import com.befoys.core.modules.WarehouseHandlingModule;
+import com.befoys.core.modules.WarehouseHandlingNoItemModule;
 
 import javax.inject.Singleton;
 
@@ -25,7 +27,9 @@ import dagger.Component;
         DriverFavoriteModule.class,
         DriverOrderModule.class,
         WarehouseDocModule.class,
-        SiteUserModule.class
+        SiteUserModule.class,
+        WarehouseHandlingModule.class,
+        WarehouseHandlingNoItemModule.class
 })
 
 public interface EntityComponent {
@@ -38,4 +42,6 @@ public interface EntityComponent {
     DriverOrderModule getDriverOrderModule();
     WarehouseDocModule getWarehouseDocModule();
     SiteUserModule getSiteUserModule();
+    WarehouseHandlingModule getWarehouseHandlingModule();
+    WarehouseHandlingNoItemModule getWarehouseHandlingNoItemModule();
 }

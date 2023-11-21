@@ -9,6 +9,8 @@ public enum Enum_Api {
     TRAVEL_STEP("driverapp/travelstep"),
     DRIVER_FAVORITE("driverapp/driverfavorite"),
     WAREHOUSE_DOC("inventoryapp/warehousedoc"),
+    WAREHOUSE_HANDLING("inventoryapp/warehousehandling"),
+    WAREHOUSE_HANDLING_NO_ITEM("inventoryapp/warehousehandlingnoitem"),
     SITEUSER("inventoryapp/siteuser");
 
     private final String apiName;

@@ -21,6 +21,7 @@ import com.befoys.core.dagger.EntityComponent;
 import com.befoys.core.persian.PersianMenu;
 import com.befoys.inventory.activities.MainActivity;
 import com.befoys.inventory.activities.WarehouseDocActivity;
+import com.befoys.inventory.activities.WarehouseHandlingActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class DrawerNavigationHelper {
@@ -85,6 +86,7 @@ public class DrawerNavigationHelper {
             //intent = new Intent(context, Barcode.class);
             intent.putExtra("selectedTabId", R.id.menu_barcode);
         } else if (menuId == R.id.menu_handling) {
+            intent = new Intent(context, WarehouseHandlingActivity.class);
             intent.putExtra("selectedTabId", R.id.menu_handling);
         } else if (menuId == R.id.menu_doc) {
             intent = new Intent(context, WarehouseDocActivity.class);

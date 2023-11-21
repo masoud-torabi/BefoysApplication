@@ -13,4 +13,16 @@
     <string name="login_and_send_sms">ورود به سیستم</string>
     <string name="label_password">رمز عبور</string>
     <string name="label_count">تعداد: </string>
+
+    <string name="label_register">ثبت</string>
+
+    <string name="label_warehouse">انبار: </string>
+    <string name="label_warehouse_doc_type">نوع حواله: </string>
+    <string name="label_warehouse_related_order">شماره سفارش مربوطه: </string>
+    <string name="label_source">نام مبدا: </string>
+    <string name="label_destination">نام مقصد: </string>
+    <string name="label_description">توضیحات: </string>
+
+    <string name="label_position">موقعیت مکانی: </string>
+    <string name="label_product_name">نام کالا</string>
 </resources>

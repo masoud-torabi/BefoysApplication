@@ -22,6 +22,7 @@ import com.befoys.core.persian.PersianDialog;
 import com.befoys.core.webservice.base.ApiResult;
 import com.befoys.core.webservice.base.ApiResultListener;
 import com.befoys.inventory.adapters.WarehouseDocItemAdapter;
+import com.befoys.inventory.helpers.DrawerNavigationHelper;
 
 public class WarehouseDocActivity extends AppCompatActivity {
 
@@ -39,6 +40,7 @@ public class WarehouseDocActivity extends AppCompatActivity {
 
         component = DaggerEntityComponent.builder().build();
         context = getApplicationContext();
+        DrawerNavigationHelper.build(this);
 
         bindPageElements();
 
